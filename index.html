@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Signup Form -->
+        <div class="form-container" id="signup-container">
+            <h2>Signup</h2>
+            <input type="text" id="signup-name" placeholder="Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signup()">Signup</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container" id="login-container" style="display:none;">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Signup</a></p>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="form-container" id="dashboard-container" style="display:none;">
+            <h2>Welcome <span id="user-name"></span>!</h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
